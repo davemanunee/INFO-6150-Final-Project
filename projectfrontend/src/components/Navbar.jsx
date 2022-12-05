@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Search } from '@mui/icons-material';
-import { FcGoogle } from 'react-icons/fc';
 
 
 const Container = styled.div
@@ -22,7 +21,7 @@ const Language = styled.span`
 font-size:14px;
 cursor:pointer;`;
 
-const SearchContainer = styled.div `
+const searchContainer = styled.div `
     border : 4px solid lightgray;
 
 `;
@@ -36,14 +35,15 @@ const Navbar = () => {
             <Wrapper>
                 <Left>
                     <Language> EN</Language>
-                    <SearchContainer>
+                    <searchContainer>
                         input
                         <Search />
-                    </SearchContainer>
+                       
+
+                    </searchContainer>
                 </Left>
                 
-                <Center> <h3> Lets go for a <FcGoogle />? </h3>
-                </Center>
+                <Center>center</Center>
 
                 <Right>right</Right>
 
