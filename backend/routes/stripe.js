@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-//Payment API
+
 const Stripe = require('stripe'); 
 const stripe = Stripe('sk_test_51MBoA5HJogvUxyFugXkeFRy23V4QwNEymzt9Kq9gkdBnehK5Yu2aoKbd9SmRvukPbKCSQ9ZOufbLHDgS3HIC5po500F3TdAVtQ')
 

@@ -2,7 +2,7 @@ import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar2 from "../components/Navbar2";
 import { mobile } from "../responsive";
 import { useSelector } from 'react-redux';
 import StripeCheckout from "react-stripe-checkout";
@@ -211,7 +211,7 @@ const Cart = () => {
 
   return (
     <Container>
-      <Navbar />
+      <Navbar2 />
       <Announcement />
       <Wrapper>
         <Title>YOUR BAG</Title>
@@ -244,9 +244,9 @@ const Cart = () => {
             </ProductDetail>
             <PriceDetail>
               <ProductAmountContainer>
-                <Add  onClick= {(e) => (e.target.value) + 1}/>
-                <ProductAmount>{product.quantity}</ProductAmount>
-                <Remove />
+                {/* <Add  onClick= {(e) => (e.target.value) + 1}/> */}
+                <ProductAmount><b>Quantity : </b>{product.quantity}</ProductAmount>
+                {/* <Remove /> */}
               </ProductAmountContainer>
               <ProductPrice>$ {product.price*product.quantity}</ProductPrice>
             </PriceDetail>
@@ -279,7 +279,7 @@ const Cart = () => {
               amount={cart.total * 100}
               token={onToken}
               stripeKey={KEY}>
-              <Button>CHECKOUT NOW</Button>
+              <Button >CHECKOUT NOW</Button>
             </StripeCheckout>
           </Summary>
         </Bottom>

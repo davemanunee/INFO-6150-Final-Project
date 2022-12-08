@@ -77,6 +77,12 @@ const MenuItem = styled.div`
     ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+const handleLogout = () => {
+
+    localStorage.clear();
+    //window.location.reload(true);
+
+}
 
 
 const Navbar = () => {
@@ -97,6 +103,7 @@ const Navbar = () => {
                 </Left>
 
                 <Center>
+                    
                     <Logo>POPShop</Logo>
                 </Center>
 
@@ -105,7 +112,7 @@ const Navbar = () => {
                         <MenuItem>About Us</MenuItem>
                     </Link>
 
-                    <Link to="/logout" style={{ textDecoration: 'none' }}>
+                    <Link to="/logout" style={{ textDecoration: 'none' }} onClick={handleLogout}>
                         <MenuItem>Logout</MenuItem>
                     </Link>
 

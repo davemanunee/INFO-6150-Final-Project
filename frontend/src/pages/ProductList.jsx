@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
+import Navbar2 from "../components/Navbar2";
 import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
@@ -54,7 +54,7 @@ const ProductList = () => {
 
   return (
     <Container>
-      <Navbar />
+      <Navbar2 />
       <Announcement />
       <Title>{cat.toLocaleUpperCase()}</Title>
       <FilterContainer>

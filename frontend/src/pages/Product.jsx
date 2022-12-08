@@ -1,7 +1,7 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar2 from "../components/Navbar2";
 import { mobile } from '../responsive';
 import {useLocation} from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -157,7 +157,7 @@ const Product = () => {
 
   return (
     <Container>
-      <Navbar />
+      <Navbar2 />
       <Wrapper>
         <ImgContainer>
           <Image src= {product.img} />

@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './pages/Home'
+import Home2 from './pages/Home2'
 import ProductList from './pages/ProductList'
 import Product from './pages/Product'
 import Register from './pages/Register'
@@ -18,6 +19,7 @@ import AboutUs from './pages/AboutUs'
 function App() {
 
   const user = useSelector((state) => state.user.currentUser);
+  
 
   return (
     <Router>
@@ -28,10 +30,11 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/success" element={<Success />} />
           {/* <Route path="/login" element={<Login />} /> */}
-          <Route path="/login" element={user?<Navigate to="/"/> : <Login/>}/>
+          <Route path="/login" element={user?<Navigate to="/home"/> : <Login/>}/>
           <Route path="/signup" element={<Register />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/logout" element={<Home />} />
+          <Route path="/home" element={<Home2 />} />
         </Routes>
     </Router>
   )

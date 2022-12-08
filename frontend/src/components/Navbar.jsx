@@ -97,7 +97,10 @@ const Navbar = () => {
                 </Left>
 
                 <Center>
+                    <Link to="/" style={{ textDecoration: 'none' }}>
                     <Logo>POPShop</Logo>
+                    </Link>
+                   
                 </Center>
 
                 <Right>
